@@ -31,7 +31,25 @@
     </style>
 
     <script type="text/javascript">
-
+        function change(x){
+            let sm = document.getElementById("smile");
+            let fr = document.getElementById("frown");
+            if (x == "sm"){
+                let ro = document.getElementById("rock").innerHTML;
+                ro.style.color="red";
+                ro.style.fontFamily="Lucida Handwriting";
+                ro.style.size="2em";
+                ro.style.backgroundColor="yellow";
+            }
+            else {
+                let su = document.getElementById("suck").innerHTML;
+                su.style.color="green";
+                ro.style.fontStyle="bold";
+                ro.style.backgroundColor="blue";
+                ro.style.size="2em";
+                ro.style.fontFamily="Arial";
+            }
+        }
     </script>
 </head>
 
@@ -49,12 +67,12 @@
 
     <table>
         <tr>
-            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile"></td>
-            <td>Web Tech Rocks!</td>
+            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile" onclick="change()" id="smile"></td>
+            <td id="rock">Web Tech Rocks!</td>
         </tr>
         <tr>
-            <td><img src="frown.jpg" alt="Frown Face" title="Sad"></td>
-            <td>Web Tech Sucks!</td>
+            <td><img src="frown.jpg" alt="Frown Face" title="Sad" onclick="change()" id="frown"></td>
+            <td id="suck">Web Tech Sucks!</td>
         </tr>
 
     </table>
